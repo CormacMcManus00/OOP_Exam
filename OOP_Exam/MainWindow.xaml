@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox HorizontalAlignment="Left" Height="285" Margin="25,113,0,0" VerticalAlignment="Top" Width="251"/>
+        <ListBox x:Name="lbxAccountNames" HorizontalAlignment="Left" Height="285" Margin="25,113,0,0" VerticalAlignment="Top" Width="251" SelectionChanged="ListBox_SelectionChanged">
+            <ListBoxItem/>
+        </ListBox>
         <TextBlock HorizontalAlignment="Left" Margin="25,92,0,0" TextWrapping="Wrap" Text="Accounts list" VerticalAlignment="Top"/>
         <CheckBox Content="Current Accounts" HorizontalAlignment="Left" Margin="25,57,0,0" VerticalAlignment="Top"/>
         <CheckBox Content="Savings Accounts" HorizontalAlignment="Left" Margin="168,57,0,0" VerticalAlignment="Top"/>
@@ -16,16 +18,17 @@
         <TextBlock HorizontalAlignment="Left" Margin="319,154,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="319,196,0,0" TextWrapping="Wrap" Text="Balance" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="319,239,0,0" TextWrapping="Wrap" Text="Account type" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="319,279,0,0" TextWrapping="Wrap" Text="Balance" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="319,320,0,0" TextWrapping="Wrap" Text="Interest Date" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="319,290,0,0" TextWrapping="Wrap" Text="Interest Date" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="319,382,0,0" TextWrapping="Wrap" Text="Transaction Amount" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="439,375,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="448,113,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="448,154,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="448,196,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="448,239,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="448,282,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="448,320,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBox x:Name="TransactionAmountValue" HorizontalAlignment="Left" Height="23" Margin="439,375,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="fNameBox" HorizontalAlignment="Left" Margin="448,113,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="sNameBox" HorizontalAlignment="Left" Margin="448,154,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="balanceBox" HorizontalAlignment="Left" Margin="448,196,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="accTypeBox" HorizontalAlignment="Left" Margin="448,239,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="interestBox" HorizontalAlignment="Left" Margin="448,290,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="0.455,-1.659"/>
+        <Button x:Name="DepositBtn" Content="Deposit" HorizontalAlignment="Left" Margin="692,109,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="WithdrawBtn" Content="Withdraw" HorizontalAlignment="Left" Margin="692,154,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="InterestBtn" Content="Interest" HorizontalAlignment="Left" Margin="692,196,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
