@@ -44,7 +44,26 @@ namespace OOP_Exam
             lbxAccountNames.ItemsSource = AccountCollection;
         }
 
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        
+
+        private void DepositBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Account selectedAccount = lbxAccountNames.SelectedItem as Account;
+            selectedAccount.Balance = selectedAccount.Balance + decimal.Parse(TransactionAmountValue.Text);
+        }
+
+        private void WithdrawBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Account selectedAccount = lbxAccountNames.SelectedItem as Account;
+            selectedAccount.Balance = selectedAccount.Balance - decimal.Parse(TransactionAmountValue.Text);
+        }
+
+        private void InterestBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Account selectedAccount = lbxAccountNames.SelectedItem as Account;
+        }
+
+        private void lbxAccountNames_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             //find selected account
             Account selectedAccount = lbxAccountNames.SelectedItem as Account;

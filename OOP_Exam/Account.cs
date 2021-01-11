@@ -14,16 +14,6 @@ namespace OOP_Exam
         public DateTime InterestDate { get; set; }
 
         abstract public decimal CalculateInterest();
-
-        public decimal Deposit()
-        {
-            throw new NotImplementedException();
-        }
-
-        public decimal WithDraw()
-        {
-            throw new NotImplementedException();
-        }
     }
 
 
